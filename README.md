@@ -5,3 +5,4 @@
 Lesson 01 - Hello World Application
 Lesson 02 - OOP Basics 
 Lesson 03 - Arrays and Methods
+Lesson 04 - Instance variables, setter methods
