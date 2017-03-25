@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Text?>
+<?import javafx.collections.FXCollections ?>
+
+<AnchorPane fx:id="mainPage" prefHeight="433.0" prefWidth="542.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Assignment05Controller">
+   <children>
+	  <!-- Select a table information -->
+      <Label layoutX="83.0" layoutY="14.0" text="JDBC GAME APPLICATION">
+         <font>
+            <Font name="Arial Bold" size="28.0" />
+         </font></Label>
+      <Label fx:id="tableNameLabel" layoutX="7.0" layoutY="54.0" text="Select a table:">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Label>
+      
+      <ComboBox fx:id="tableComboBox" layoutX="10.0" layoutY="78.0" prefHeight="25.0" prefWidth="126.0" value="game">
+      	<items>
+      		<FXCollections fx:factory="observableArrayList">
+        		<String fx:value="game" />
+        		<String fx:value="player and game" />
+        		<String fx:value="player" />
+        	</FXCollections>
+      	</items>
+      </ComboBox>
+      
+      <Button fx:id="selectButton" layoutX="146.0" layoutY="78.0" mnemonicParsing="false" onAction="#selectButtonHandler" prefHeight="25.0" prefWidth="63.0" text="Select" />
+      <Button fx:id="displayButton" disable="true" layoutX="24.0" layoutY="114.0" mnemonicParsing="false" onAction="#displayButtonHandler" prefHeight="25.0" prefWidth="63.0" text="Display" />
+      <Button fx:id="addButton" disable="true" layoutX="105.0" layoutY="114.0" mnemonicParsing="false" onAction="#addButtonHandler" prefHeight="25.0" prefWidth="63.0" text="Add" />
+      <Button fx:id="updateButton" disable="true" layoutX="24.0" layoutY="146.0" mnemonicParsing="false" onAction="#updateButtonHandler" prefHeight="25.0" prefWidth="63.0" text="Update" />
+      <Button fx:id="removeButton" disable="true" layoutX="105.0" layoutY="146.0" mnemonicParsing="false" onAction="#removeButtonHandler" prefHeight="25.0" prefWidth="63.0" text="Remove" />
+      <Label fx:id="tableDataLabel" layoutX="266.0" layoutY="54.0" text="Table Data:">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Label>
+      <Label fx:id="tableActionLabel" layoutX="14.0" layoutY="175.0" text="Label">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Label>
+      <Text fx:id="messageText" fill="RED" layoutX="14.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="440.0">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Text>
+      
+      <ScrollPane layoutX="266.0" layoutY="79.0" prefHeight="313.0" prefWidth="261.0">
+         <content>
+            <GridPane fx:id="tableData" prefHeight="311.0" prefWidth="261.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      
+      <ScrollPane fx:id="container2" layoutX="11.0" layoutY="192.0" prefHeight="200.0" prefWidth="250.0">
+         <content>
+            <GridPane fx:id="tableData2" prefHeight="204.0" prefWidth="243.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="124.0" minWidth="10.0" prefWidth="76.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="10.0" prefWidth="157.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <Button fx:id="exitButton" layoutX="465.0" layoutY="398.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" text="Exit" />
+      
+      
+   </children>
+</AnchorPane>
