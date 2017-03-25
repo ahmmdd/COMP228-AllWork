@@ -11,3 +11,5 @@ Lesson 06 - Exploring GUI programming
 
 Assignment 1
 Assignment 2 - Dice Game
+
+Test 1
